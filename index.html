@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intersparser</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">Intersparser</h1>
+
+        <div id="fields-container">
+            <div class="field">
+                <label class="caption" for="intersperse-input">Intersperse this</label>
+                <br />
+                <input id="intersperse-input" class="text-field" type="text" placeholder="Secret phrase to intersperse" />
+            </div>
+
+            <div class="field">
+                <label class="caption" for="full-text-input">Into this</label>
+                <br />
+                <textarea id="full-text-input" class="text-field" placeholder="Full text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo odio, suscipit at lacus tincidunt, condimentum tristique metus. Cras pretium in nibh volutpat vulputate. Vivamus maximus cursus erat, nec egestas tellus. Duis eget sodales felis, in tristique justo. Aliquam tempor neque vel felis suscipit, in egestas velit condimentum. Phasellus lectus leo, accumsan sit amet sodales et, consectetur vel ante. Ut congue mi ligula, at bibendum nisi efficitur et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</textarea>
+            </div>
+
+            <div class="field">
+                <div class="caption">Using this</div>
+                <br />
+                <input type="radio" id="bold-radio" name="style-type" value="b" checked /> <label for="bold-radio"><b>Bold</b></label>
+                <br />
+                <input type="radio" id="italicize-radio" name="style-type" value="em" /> <label for="italicize-radio"><em>Italicize</em></label>
+                <br />
+                <input type="radio" id="underline-radio" name="style-type" value="u" /> <label for="underline-radio"><u>Underline</u></label>
+            </div>
+        </div>
+
+        <hr />
+
+        <div id="results-container">
+            <div id="rendered-output-container" class="section">
+                <div class="caption">Output</div>
+                <div id="rendered-output">Enter some text above!</div>
+            </div>
+
+            <div id="raw-html-container" class="section">
+                <div class="caption">HTML</div>
+                <br />
+                <textarea id="raw-html" class="text-field" readonly>Enter some text above!</textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

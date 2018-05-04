@@ -1,0 +1,53 @@
+body {
+    background-color: #FFFCF7;
+}
+
+body, input {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+#container > * {
+    width: 100%;
+}
+
+#container {
+    margin: 0 10px;
+}
+
+#title {
+    text-align: center;
+}
+
+.field, .section {
+    margin-bottom: 15px;
+}
+
+.text-field {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #CCC;
+    margin: 15px 0;
+}
+
+.caption {
+    background-color: #333;
+    color: #EEE;
+    margin-bottom: 5px;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
