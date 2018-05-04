@@ -2,7 +2,7 @@ body {
     background-color: #FFFCF7;
 }
 
-body, input {
+body, input, textarea {
     font-family: monospace;
     font-size: 14px;
 }
