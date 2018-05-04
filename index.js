@@ -21,17 +21,25 @@ function getStyleName() {
 function intersperse(partial = '', full = '', styleName) {
     const output = [];
 
-    for (let fullTextIdx = 0, partialTextIdx = 0; fullTextIdx < full.length; fullTextIdx++) {
-        if (partialTextIdx < partial.length && full[fullTextIdx].localeCompare(partial[partialTextIdx], 'en', {sensitivity: 'base'}) === 0) {
-            if (partial[partialTextIdx] !== ' ') {
-                output.push(`<${styleName}>`);
-                output.push(full[fullTextIdx]);
-                output.push(`</${styleName}>`);
-            }
+    for (let fullTextIdx = 0, partialTextIdx = 0; fullTextIdx < full.length;) {
+        if (partialTextIdx >= partial.length) {
+            output.push(full.substring(fullTextIdx));
+            break;
+        }
+
+        if (partial[partialTextIdx] === ' ') {
             partialTextIdx++;
+        }
+        else if (full[fullTextIdx].localeCompare(partial[partialTextIdx], 'en', {sensitivity: 'base'}) === 0) {
+            output.push(`<${styleName}>`);
+            output.push(full[fullTextIdx]);
+            output.push(`</${styleName}>`);
+            partialTextIdx++;
+            fullTextIdx++;
         }
         else {
             output.push(full[fullTextIdx]);
+            fullTextIdx++;
         }
     }
 
